@@ -16,6 +16,7 @@ class Game:
     def spawn_sand(self, row, col):
         if self.is_within_bounds(row, col) and self.is_empty(row, col):
             self.board[row][col] = 1
+    
     def draw_board(self):
         for i in range(ROWS):
             for j in range(COLUMNS):
@@ -41,10 +42,8 @@ class Game:
         else:
             return row, col
 
-    def is_within_bounds(self, i, j):
-        """Check if the cell is within the bounds of the board."""
-        return 0 <= i < ROWS and 0 <= j < COLUMNS
+    def is_within_bounds(self, row, col):
+        return 0 <= row < ROWS and 0 <= col < COLUMNS
 
-    def is_empty(self, i, j):
-        """Check if the cell is empty."""
-        return self.is_within_bounds(i, j) and self.board[i][j] == 0
+    def is_empty(self, row, col):
+        return self.is_within_bounds(row, col) and self.board[row][col] == 0
