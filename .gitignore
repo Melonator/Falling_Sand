@@ -1,0 +1,16 @@
+# Python environment
+.venv/
+venv/
+
+# PyInstaller builds
+dist/
+build/
+*.spec
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Other files and directories to ignore
+# (add any other directories or files that are not part of the project)
